@@ -7,8 +7,10 @@ interface HomeLayoutProps {
 
 export default function HomeLayout({ children }: HomeLayoutProps) {
   return (
-    <div>
-      <Header navItems={HOME_CONFIG.homeNavItems} />
+        <Header
+          navItems={HOME_CONFIG.homeNavItems}
+          socialLinks={HOME_CONFIG.homeSocialLinks}
+        />
       <main>{children}</main>
       <footer></footer>
     </div>

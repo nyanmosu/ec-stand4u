@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { NavItem } from "@/types/nav";
+import type { SocialLink } from "@/types/social";
 
 interface HeaderProps {
   navItems?: NavItem[];
+  socialLinks?: SocialLink[];
 }
 
-export default function Header({ navItems }: HeaderProps) {
+export default function Header({ navItems, socialLinks }: HeaderProps) {
   return (
     <header>
       <div className="flex items-center justify-between px-7 py-6 md:px-11 md:py-12 xl:p-16">
@@ -49,48 +51,31 @@ export default function Header({ navItems }: HeaderProps) {
 
         <div className="flex items-center xl:gap-16">
           {/* ソーシャルメディアリンク */}
-          <nav className="hidden xl:block" aria-label="ソーシャルリンク">
-            <ul className="flex items-center justify-center gap-2">
-              {/* インスタグラム */}
-              <li className="flex items-center justify-center">
-                <Link
-                  href="/"
-                  className="inline-block"
-                  aria-label="インスタグラム"
-                >
-                  <Image
-                    src="/instagram.svg"
-                    alt="インスタグラムの画像"
-                    width={20}
-                    height={20}
-                  />
-                </Link>
-              </li>
-
-              {/* フェイスブック */}
-              <li className="flex items-center justify-center">
-                <Link
-                  href="/"
-                  className="inline-block"
-                  aria-label="フェイスブック"
-                >
-                  <Image
-                    src="/facebook.svg"
-                    alt="フェイスブックの画像"
-                    width={20}
-                    height={20}
-                  />
-                </Link>
-              </li>
-
-              {/* X */}
-              <li className="flex items-center justify-center">
-                <Link href="/" className="inline-block" aria-label="X">
-                  <Image src="/x.svg" alt="Xの画像" width={20} height={20} />
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          {socialLinks && socialLinks.length > 0 ? (
+            <nav className="hidden xl:block" aria-label="ソーシャルリンク">
+              <ul className="flex items-center justify-center gap-2">
+                {socialLinks.map((item) => (
+                  <li
+                    key={`${item.href}:${item.ariaLabel}`}
+                    className="flex items-center justify-center"
+                  >
+                    <Link
+                      href={item.href}
+                      className="inline-block"
+                      aria-label={item.ariaLabel}
+                    >
+                      <Image
+                        src={item.iconSrc}
+                        alt={item.iconAlt}
+                        width={item.iconWidth}
+                        height={item.iconHeight}
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : null}
 
           {/* ハンバーガーメニュー */}
           <button
