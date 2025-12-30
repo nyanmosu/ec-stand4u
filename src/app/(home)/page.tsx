@@ -26,7 +26,7 @@ export default function HomePage() {
           @4xl:w-[660px]
           @5xl:w-[520px]
           @6xl:w-[640px]
-          @7xl:w-[760px]"
+          @7xl:w-[700px]"
           >
             <Image
               src="/main-visual-img_001.png"
@@ -57,7 +57,8 @@ export default function HomePage() {
               @sm:w-[140px] @sm:h-[180px]
               @md:w-[160px] @md:h-[200px]
               @3xl:w-[200px] @3xl:h-[260px]
-              @5xl:w-[220px] @5xl:h-[340px]"
+              @5xl:w-[220px] @5xl:h-[340px]
+              @7xl:w-[240px] @7xl:h-[360px]"
               >
                 <Image
                   src="/sub-visual-img_001.png"
@@ -66,6 +67,7 @@ export default function HomePage() {
                   priority
                   className="object-cover"
                   sizes="
+                  (min-width: 1280px) 240px,
                   (min-width: 1024px) 220px,
                   (min-width: 768px) 200px,
                   (min-width: 448px) 160px,
@@ -79,7 +81,8 @@ export default function HomePage() {
               @sm:w-[140px] @sm:h-[180px]
               @md:w-[160px] @md:h-[200px]
               @3xl:w-[200px] @3xl:h-[260px]
-              @5xl:w-[220px] @5xl:h-[340px]"
+              @5xl:w-[220px] @5xl:h-[340px]
+              @7xl:w-[240px] @7xl:h-[360px]"
               >
                 <Image
                   src="/sub-visual-img_002.png"
@@ -88,6 +91,7 @@ export default function HomePage() {
                   priority
                   className="object-cover"
                   sizes="
+                  (min-width: 1280px) 240px,
                   (min-width: 1024px) 220px,
                   (min-width: 768px) 200px,
                   (min-width: 448px) 160px,
