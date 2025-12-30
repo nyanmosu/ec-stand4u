@@ -26,7 +26,7 @@ export default function HomePage() {
               fill
               priority
               className="object-cover"
-              sizes="180px, (min-width: 384px) 220px, (min-width:448px) 270px"
+              sizes="(min-width: 448px) 270px, (min-width: 384px) 220px, 180px"
             />
           </div>
 
@@ -45,7 +45,7 @@ export default function HomePage() {
                   fill
                   priority
                   className="object-cover"
-                  sizes="118px, (min-width: 384px) 140px, (min-width:448px) 160px"
+                  sizes="(min-width: 448px) 160px, (min-width: 384px) 140px, 118px"
                 />
               </div>
               <div
@@ -61,7 +61,7 @@ export default function HomePage() {
                   fill
                   priority
                   className="object-cover"
-                  sizes="118px, (min-width: 384px) 140px, (min-width:448px) 160px"
+                  sizes="(min-width: 448px) 160px, (min-width: 384px) 140px, 118px"
                 />
               </div>
             </div>
