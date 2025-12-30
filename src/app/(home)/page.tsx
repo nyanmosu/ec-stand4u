@@ -22,7 +22,8 @@ export default function HomePage() {
           @lg:w-[330px]
           @xl:w-[390px]
           @2xl:w-[490px]
-          @3xl:w-[540px]"
+          @3xl:w-[540px]
+          @4xl:w-[640px]"
           >
             <Image
               src="/main-visual-img_001.png"
@@ -31,6 +32,7 @@ export default function HomePage() {
               priority
               className="object-cover"
               sizes="
+              (min-width: 896px) 640px,
               (min-width: 672px) 490px,
               (min-width: 576px) 390px,
               (min-width: 512px) 330px,
