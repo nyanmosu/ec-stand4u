@@ -6,7 +6,7 @@ export default function HomePage() {
       <section>
         <div className="relative min-h-svh w-full mx-auto xl:max-w-[1440px] @container">
           {/* タグライン */}
-          <div className="absolute left-7 @sm:left-10 @md:left-12 @xl:left-16 top-30 @lg:top-24 @3xl:top-32 @5xl:top-58 @6xl:top-64 @7xl:top-50 z-10">
+          <div className="absolute left-7 @sm:left-10 @md:left-12 @xl:left-16 top-30 @lg:top-24 @3xl:top-32 @5xl:top-58 @6xl:top-64 @7xl:top-46 z-10">
             <h1 className="ts-tagline-en uppercase">unaffected</h1>
             <p className="ts-tagline-sub-en">
               We always like to wear what we love.
