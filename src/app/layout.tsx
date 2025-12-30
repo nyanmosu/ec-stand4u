@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Noto_Sans_JP } from "next/font/google";
 import "@/styles/globals.css";
+import { Analytics } from "@/components/analytics";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${barlowCondensed.variable} ${notoSansJP.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
