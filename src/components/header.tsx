@@ -10,11 +10,11 @@ export default function Header({ navItems }: HeaderProps) {
   return (
     <header>
       <div className="flex items-center justify-between px-7 py-6 md:px-11 md:py-12 xl:p-16">
-        <div className="flex items-center justify-between gap-18">
+        <div className="flex items-center justify-between xl:gap-18">
           {/* ロゴ */}
           <Link href="/" className="inline-block" aria-label="ホーム">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="ロゴの画像"
               width={90}
               height={19}
@@ -47,16 +47,62 @@ export default function Header({ navItems }: HeaderProps) {
           ) : null}
         </div>
 
-        {/* ハンバーガー */}
-        <button
-          type="button"
-          aria-label="メニュー"
-          className="inline-flex flex-col items-center justify-center gap-2 md:gap-3"
-        >
-          <span className="bg-main h-0.5 w-10 md:h-[3px] md:w-16" />
-          <span className="bg-main h-0.5 w-10 md:h-[3px] md:w-16" />
-          <span className="bg-main h-0.5 w-10 md:h-[3px] md:w-16" />
-        </button>
+        <div className="flex items-center xl:gap-16">
+          {/* ソーシャルメディアリンク */}
+          <nav className="hidden xl:block" aria-label="ソーシャルリンク">
+            <ul className="flex items-center justify-center gap-2">
+              {/* インスタグラム */}
+              <li className="flex items-center justify-center">
+                <Link
+                  href="/"
+                  className="inline-block"
+                  aria-label="インスタグラム"
+                >
+                  <Image
+                    src="/instagram.svg"
+                    alt="インスタグラムの画像"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+              </li>
+
+              {/* フェイスブック */}
+              <li className="flex items-center justify-center">
+                <Link
+                  href="/"
+                  className="inline-block"
+                  aria-label="フェイスブック"
+                >
+                  <Image
+                    src="/facebook.svg"
+                    alt="フェイスブックの画像"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+              </li>
+
+              {/* X */}
+              <li className="flex items-center justify-center">
+                <Link href="/" className="inline-block" aria-label="X">
+                  <Image src="/x.svg" alt="Xの画像" width={20} height={20} />
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* ハンバーガーメニュー */}
+          <button
+            type="button"
+            aria-label="メニュー"
+            className="inline-flex flex-col items-center justify-center gap-2 md:gap-3"
+          >
+            <span className="bg-main h-0.5 w-10 md:h-[3px] md:w-16" />
+            <span className="bg-main h-0.5 w-10 md:h-[3px] md:w-16" />
+            <span className="bg-main h-0.5 w-10 md:h-[3px] md:w-16" />
+          </button>
+        </div>
       </div>
     </header>
   );
