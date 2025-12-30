@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* ================================================
+   * カラースタイル
+   * ================================================ */
+
+  --color-main: #333333;
+  --color-sub: #969696;
+  --color-accent: #e58fb3;
+  --color-surface: #eeeeee;
+  --color-line: #d8d8d8;
+  --color-white: #ffffff;
+  --color-text: #333333;
+  --gradation-k: linear-gradient(180deg, #000000 0%, #000000 100%);
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-barlow-condensed), var(--font-noto-sans-jp), Arial,
+    Helvetica, sans-serif;
+}
+
+@utility font-barlow-condensed {
+  font-family: var(--font-barlow-condensed);
+}
+
+@utility font-noto-sans-jp {
+  font-family: var(--font-noto-sans-jp);
+}
+
+@layer utilities {
+  /* ================================================
+   * テキストスタイル
+   * ================================================ */
+
+  /**
+   * common
+   */
+  .ts-btn-mini-en {
+    @apply font-barlow-condensed font-medium text-xs leading-none tracking-widest;
+  }
+
+  .ts-tag {
+    @apply font-noto-sans-jp font-normal text-[10px] leading-none tracking-normal;
+  }
+
+  .ts-btn {
+    @apply font-noto-sans-jp font-medium text-xl leading-none tracking-widest;
+  }
+
+  .ts-new-icon {
+    @apply font-barlow-condensed font-medium text-xs leading-none tracking-wider;
+  }
+
+  /**
+   * pc / tab / sp
+   */
+  .ts-gnav-en {
+    @apply font-barlow-condensed font-normal text-lg leading-none tracking-widest;
+  }
+
+  .ts-tagline-en {
+    @apply font-barlow-condensed font-medium text-[54px] md:text-[120px] xl:text-[180px] leading-none tracking-wider;
+  }
+
+  .ts-tagline-sub-en {
+    @apply font-barlow-condensed font-medium text-xs md:text-[28px] xl:text-[34px] leading-none tracking-wider xl:tracking-[0.06em];
+  }
+
+  .ts-h2-en {
+    @apply font-barlow-condensed font-medium text-[45px] md:text-[55px] xl:text-[64px] leading-none tracking-widest;
+  }
+
+  .ts-h2-sub {
+    @apply font-noto-sans-jp font-normal text-sm md:text-base leading-none tracking-widest;
+  }
+
+  .ts-h3 {
+    @apply font-noto-sans-jp font-bold text-xl leading-normal tracking-wider;
+  }
+
+  .ts-caption {
+    @apply font-noto-sans-jp font-normal text-base leading-[1.7] tracking-wider;
+  }
+
+  .ts-body {
+    @apply font-noto-sans-jp font-normal text-base leading-loose tracking-wider;
+  }
+
+  .ts-caption-mini {
+    @apply font-noto-sans-jp font-normal text-xs leading-none tracking-normal;
+  }
+
+  .ts-footer-nav-en {
+    @apply font-barlow-condensed font-normal text-sm md:text-base leading-none tracking-widest;
+  }
+
+  .ts-copyright-en {
+    @apply font-barlow-condensed font-normal text-[10px] md:text-xs leading-none tracking-[0.15em];
+  }
+}
