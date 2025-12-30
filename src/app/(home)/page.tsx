@@ -20,7 +20,8 @@ export default function HomePage() {
           @sm:w-[220px]
           @md:w-[270px]
           @lg:w-[330px]
-          @xl:w-[390px]"
+          @xl:w-[390px]
+          @2xl:w-[490px]"
           >
             <Image
               src="/main-visual-img_001.png"
@@ -28,7 +29,7 @@ export default function HomePage() {
               fill
               priority
               className="object-cover"
-              sizes="(min-width: 576px) 390px, (min-width: 512px) 330px, (min-width: 448px) 270px, (min-width: 384px) 220px, 180px"
+              sizes="(min-width: 672px) 490px, (min-width: 576px) 390px, (min-width: 512px) 330px, (min-width: 448px) 270px, (min-width: 384px) 220px, 180px"
             />
           </div>
 
