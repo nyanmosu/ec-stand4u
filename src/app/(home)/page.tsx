@@ -6,7 +6,7 @@ export default function HomePage() {
       <section>
         <div className="relative min-h-svh w-full mx-auto xl:max-w-[1440px] @container">
           {/* タグライン */}
-          <div className="absolute left-7 @sm:left-10 @md:left-12 @xl:left-16 top-30 @lg:top-24 z-10">
+          <div className="absolute left-7 @sm:left-10 @md:left-12 @xl:left-16 top-30 @lg:top-24 @3xl:top-28 z-10">
             <h1 className="ts-tagline-en uppercase">unaffected</h1>
             <p className="ts-tagline-sub-en">
               We always like to wear what we love.
@@ -21,7 +21,8 @@ export default function HomePage() {
           @md:w-[270px]
           @lg:w-[330px]
           @xl:w-[390px]
-          @2xl:w-[490px]"
+          @2xl:w-[490px]
+          @3xl:w-[540px]"
           >
             <Image
               src="/main-visual-img_001.png"
@@ -29,7 +30,13 @@ export default function HomePage() {
               fill
               priority
               className="object-cover"
-              sizes="(min-width: 672px) 490px, (min-width: 576px) 390px, (min-width: 512px) 330px, (min-width: 448px) 270px, (min-width: 384px) 220px, 180px"
+              sizes="
+              (min-width: 672px) 490px,
+              (min-width: 576px) 390px,
+              (min-width: 512px) 330px,
+              (min-width: 448px) 270px,
+              (min-width: 384px) 220px,
+              180px"
             />
           </div>
 
@@ -40,7 +47,8 @@ export default function HomePage() {
                 className="relative
               w-[118px] h-[162px]
               @sm:w-[140px] @sm:h-[180px]
-              @md:w-[160px] @md:h-[200px]"
+              @md:w-[160px] @md:h-[200px]
+              @3xl:w-[200px] @3xl:h-[260px]"
               >
                 <Image
                   src="/sub-visual-img_001.png"
@@ -48,7 +56,11 @@ export default function HomePage() {
                   fill
                   priority
                   className="object-cover"
-                  sizes="(min-width: 448px) 160px, (min-width: 384px) 140px, 118px"
+                  sizes="
+                  (min-width: 768px) 200px,
+                  (min-width: 448px) 160px,
+                  (min-width: 384px) 140px,
+                  118px"
                 />
               </div>
               <div
@@ -56,7 +68,7 @@ export default function HomePage() {
               w-[118px] h-[162px]
               @sm:w-[140px] @sm:h-[180px]
               @md:w-[160px] @md:h-[200px]
-              "
+              @3xl:w-[200px] @3xl:h-[260px]"
               >
                 <Image
                   src="/sub-visual-img_002.png"
@@ -64,7 +76,11 @@ export default function HomePage() {
                   fill
                   priority
                   className="object-cover"
-                  sizes="(min-width: 448px) 160px, (min-width: 384px) 140px, 118px"
+                  sizes="
+                  (min-width: 768px) 200px,
+                  (min-width: 448px) 160px,
+                  (min-width: 384px) 140px,
+                  18px"
                 />
               </div>
             </div>
