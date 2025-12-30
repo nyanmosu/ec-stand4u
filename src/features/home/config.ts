@@ -7,4 +7,30 @@ export const HOME_CONFIG: HomeConfig = {
     { href: "/", label: "journal", ariaLabel: "記事一覧" },
     { href: "/", label: "all items", ariaLabel: "商品一覧" },
   ],
+  homeSocialLinks: [
+    {
+      href: "/",
+      ariaLabel: "インスタグラム",
+      iconSrc: "/instagram.svg",
+      iconAlt: "インスタグラムの画像",
+      iconWidth: 20,
+      iconHeight: 20,
+    },
+    {
+      href: "/",
+      ariaLabel: "フェイスブック",
+      iconSrc: "/facebook.svg",
+      iconAlt: "フェイスブックの画像",
+      iconWidth: 20,
+      iconHeight: 20,
+    },
+    {
+      href: "/",
+      ariaLabel: "X",
+      iconSrc: "/x.svg",
+      iconAlt: "Xの画像",
+      iconWidth: 20,
+      iconHeight: 20,
+    },
+  ],
 };
