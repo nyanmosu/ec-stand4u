@@ -6,7 +6,7 @@ export default function HomePage() {
       <section>
         <div className="relative min-h-svh w-full mx-auto xl:max-w-[1440px] @container">
           {/* タグライン */}
-          <div className="absolute left-7 @sm:left-10 @md:left-12 top-30 @lg:top-24 z-10">
+          <div className="absolute left-7 @sm:left-10 @md:left-12 @xl:left-16 top-30 @lg:top-24 z-10">
             <h1 className="ts-tagline-en uppercase">unaffected</h1>
             <p className="ts-tagline-sub-en">
               We always like to wear what we love.
@@ -19,7 +19,8 @@ export default function HomePage() {
           w-[180px]
           @sm:w-[220px]
           @md:w-[270px]
-          @lg:w-[330px]"
+          @lg:w-[330px]
+          @xl:w-[390px]"
           >
             <Image
               src="/main-visual-img_001.png"
@@ -27,7 +28,7 @@ export default function HomePage() {
               fill
               priority
               className="object-cover"
-              sizes="(min-width: 512px) 330px, (min-width: 448px) 270px, (min-width: 384px) 220px, 180px"
+              sizes="(min-width: 576px) 390px, (min-width: 512px) 330px, (min-width: 448px) 270px, (min-width: 384px) 220px, 180px"
             />
           </div>
 
