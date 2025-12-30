@@ -29,7 +29,10 @@ export default function Header({ navItems }: HeaderProps) {
             <nav className="hidden xl:block">
               <ul className="flex items-center">
                 {navItems.map((item) => (
-                  <li key={`${item.href}:${item.label}`} className="px-6">
+                  <li
+                    key={`${item.href}:${item.label}`}
+                    className="px-6 border-r border-line last:border-r-0"
+                  >
                     <Link
                       href={item.href}
                       className="uppercase ts-gnav-en"
