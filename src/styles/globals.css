@@ -70,7 +70,7 @@ body {
   }
 
   .ts-h2-en {
-    @apply font-barlow-condensed font-medium text-[45px] md:text-[55px] xl:text-[64px] leading-none tracking-widest;
+    @apply font-barlow-condensed font-medium text-[44px] md:text-[55px] xl:text-[64px] leading-none tracking-widest;
   }
 
   .ts-h2-sub {
