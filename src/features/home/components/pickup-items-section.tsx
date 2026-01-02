@@ -6,9 +6,15 @@ export default function PickupItemsSection() {
   return (
     <section aria-labelledby="pickup-items-heading">
       <div className="px-7 md:px-11 xl:px-30">
-        <div className="flex flex-col items-center gap-8 md:gap-10 xl:flex-row xl:items-start xl:gap-[82px] xl:max-w-[1040px] mx-auto">
+        <div className="relative flex flex-col items-center gap-8 md:gap-10 xl:flex-row xl:items-start xl:gap-[82px] xl:max-w-[1040px] mx-auto">
+          {/* 背景 */}
+          <div
+            aria-hidden="true"
+            className="hidden xl:block pointer-events-none absolute z-0 bg-surface w-screen top-[calc(198px/2)] bottom-0 -translate-x-1/2 left-1/2"
+          />
+
           {/* 見出し */}
-          <div className="flex flex-col items-center gap-1 md:gap-2 xl:gap-3 xl:items-start">
+          <div className="relative z-10 flex flex-col items-center gap-1 md:gap-2 xl:gap-3 xl:items-start">
             <h2 id="pickup-items-heading" className="ts-h2-en uppercase">
               Pickup <br className="hidden xl:block" />
               Items
@@ -19,13 +25,12 @@ export default function PickupItemsSection() {
           </div>
 
           {/* 商品リスト */}
-          <div className="relative w-full pb-20">
+          <div className="relative z-10 w-full pb-20">
             {/* 背景 */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute z-0 bg-surface w-screen top-[calc(171px/2)] md:top-[calc(184.5px/2.3)] xl:hidden bottom-0 -translate-x-1/2 left-1/2"
             />
-
             <ul className="relative z-10 grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:max-w-[680px] xl:max-w-[732px] xl:gap-7 mx-auto">
               {PICKUP_ITEMS.map((item, index) => (
                 <li
