@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PICKUP_ITEMS } from "@/features/home/data/pickup-items";
+import SectionHeading from "@/features/home/components/section-heading";
 
 export default function PickupItemsSection() {
   return (
@@ -10,19 +11,23 @@ export default function PickupItemsSection() {
           {/* 背景 */}
           <div
             aria-hidden="true"
-            className="hidden xl:block pointer-events-none absolute z-0 bg-surface w-screen top-[calc(198px/2)] bottom-0 -translate-x-1/2 left-1/2"
+            className="hidden xl:block pointer-events-none absolute z-0 bg-surface w-screen top-[calc(198px/2.1)] bottom-0 -translate-x-1/2 left-1/2"
           />
 
           {/* 見出し */}
-          <div className="relative z-10 flex flex-col items-center gap-1 md:gap-2 xl:gap-3 xl:items-start">
-            <h2 id="pickup-items-heading" className="ts-h2-en uppercase">
-              Pickup <br className="hidden xl:block" />
-              Items
-            </h2>
-            <p className="ts-h2-sub whitespace-nowrap">
-              注目のファッションアイテム
-            </p>
-          </div>
+          <SectionHeading
+            id="pickup-items-heading"
+            title={
+              <>
+                Pickup <br className="hidden xl:block" />
+                Items
+              </>
+            }
+            subtitle="注目のファッションアイテム"
+            subtitleClassName="whitespace-nowrap"
+            xlAlign="start"
+            className="relative z-10"
+          />
 
           {/* 商品リスト */}
           <div className="relative z-10 w-full pb-20">
