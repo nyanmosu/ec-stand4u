@@ -4,7 +4,7 @@ import SectionHeading from "@/features/home/components/section-heading";
 export default function AboutUsSection() {
   return (
     <section aria-labelledby="about-us-heading">
-      <div className="flex flex-col items-center px-7 gap-8">
+      <div className="flex flex-col items-center px-7 gap-8 md:px-11 md:gap-10 xl:px-20 xl:gap-12">
         {/* 見出し */}
         <SectionHeading
           id="about-us-heading"
@@ -13,14 +13,14 @@ export default function AboutUsSection() {
         />
 
         {/* コンテンツ */}
-        <div className="flex flex-col items-center gap-6">
-          <div className="relative w-full h-[171px]">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:grid md:grid-cols-2 xl:gap-16">
+          <div className="relative w-full h-[171px] md:h-[185px] xl:h-[306px]">
             <Image
               src="/about-img.png"
               alt="About Us"
               fill
               className="object-cover"
-              sizes="304px"
+              sizes="(min-width: 1280px) 544px, (min-width: 768px) 328px, 304px"
             />
           </div>
           <div className="flex flex-col gap-8">
