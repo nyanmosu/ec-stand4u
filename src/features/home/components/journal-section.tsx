@@ -6,7 +6,7 @@ import { JOURNAL_ITEMS } from "@/features/home/data/journal-items";
 export default function JournalSection() {
   return (
     <section aria-labelledby="journal-heading">
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8 md:gap-10">
         {/* 見出し */}
         <SectionHeading
           id="journal-heading"
@@ -19,17 +19,17 @@ export default function JournalSection() {
           {JOURNAL_ITEMS.map((item, index) => (
             <li
               key={item.id}
-              className="w-[304px] py-8 border-b border-dashed border-b-line first:pt-0"
+              className="w-[304px] md:w-[680px] py-8 border-b border-dashed border-b-line first:pt-0"
             >
-              <article className="flex flex-col gap-6">
+              <article className="flex flex-col gap-6 md:flex-row">
                 {/* 画像 */}
-                <div className="relative h-[171px] w-full">
+                <div className="relative h-[171px] w-full md:h-[135px] md:w-[240px] md:flex-none md:shrink-0">
                   <Image
                     src={item.imageSrc}
                     alt={item.title}
                     fill
                     className="object-cover"
-                    sizes="304px"
+                    sizes="(min-width: 768px) 240px, 304px"
                     priority={index === 0}
                     loading={index === 0 ? "eager" : "lazy"}
                   />
@@ -63,7 +63,10 @@ export default function JournalSection() {
             </li>
           ))}
         </ul>
-        <Link href="/" className="ts-btn bg-main text-white px-10 py-3 rounded-full">
+        <Link
+          href="/"
+          className="ts-btn bg-main text-white px-10 py-3 rounded-full"
+        >
           <span>記事一覧</span>
         </Link>
       </div>
