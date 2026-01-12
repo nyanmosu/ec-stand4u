@@ -16,3 +16,12 @@ export interface PickupItem {
   imageSrc: string;
   href: string;
 }
+
+export interface JournalItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  imageSrc: string;
+  isNew: boolean;
+  tags: readonly string[];
+}
