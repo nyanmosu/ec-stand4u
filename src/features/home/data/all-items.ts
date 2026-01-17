@@ -1,0 +1,68 @@
+import type { AllItem } from "@/features/home/types";
+
+export const ALL_ITEMS: AllItem[] = [
+  {
+    id: "001",
+    name: "ナチュラルワンピース",
+    priceLabel: "￥39,800",
+    imageSrc: "/item-img_001.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "002",
+    name: "花柄ハイヒール",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_002.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "003",
+    name: "ピンクバック",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_003.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "004",
+    name: "偏光サングラス",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_004.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "005",
+    name: "イエロードレス",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_005.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "006",
+    name: "ナチュラルブラウス",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_006.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "007",
+    name: "ホワイトセットアップ",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_007.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+  {
+    id: "008",
+    name: "フラミンゴバック",
+    priceLabel: "￥19,800",
+    imageSrc: "/item-img_008.png",
+    href: "/",
+    ctaText: "BUY NOW",
+  },
+];

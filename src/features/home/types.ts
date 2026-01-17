@@ -25,3 +25,12 @@ export interface JournalItem {
   isNew: boolean;
   tags: readonly string[];
 }
+
+export interface AllItem {
+  id: string;
+  name: string;
+  priceLabel: string;
+  imageSrc: string;
+  href: string;
+  ctaText?: string;
+}
