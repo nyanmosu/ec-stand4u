@@ -11,9 +11,9 @@ type FooterProps = {
 export default function Footer({ navItems, socialLinks }: FooterProps) {
   return (
     <footer className="bg-surface text-text">
-      <div className="flex flex-col items-start gap-8 px-7 py-16">
+      <div className="flex flex-col items-start gap-8 px-7 py-16 md:flex-row md:justify-between md:px-11 md:py-20">
         <div className="flex flex-col items-start gap-3">
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start gap-4 md:gap-6">
             <Image src="/logo.svg" alt="logo" width={90} height={19} />
             <nav
               aria-label="フッターナビゲーション"
@@ -24,7 +24,7 @@ export default function Footer({ navItems, socialLinks }: FooterProps) {
                   key={`${item.href}:${item.label}`}
                   href={item.href}
                   aria-label={item.ariaLabel}
-                  className="px-2 border-r border-line last:border-r-0 first:pl-0 first:pr-2 last:pr-0 last:pl-2"
+                  className="px-2 md:px-4 border-r border-line last:border-r-0 first:pl-0 first:pr-2 last:pr-0 last:pl-2 md:first:pr-4 md:last:pl-4"
                 >
                   {item.label}
                 </Link>
