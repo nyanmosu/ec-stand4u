@@ -6,7 +6,7 @@ import { ALL_ITEMS } from "@/features/home/data/all-items";
 export default function AllItemsSection() {
   return (
     <section aria-labelledby="all-items-heading">
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8 md:gap-10 xl:gap-12">
         {/* 見出し */}
         <SectionHeading
           id="all-items-heading"
@@ -15,16 +15,21 @@ export default function AllItemsSection() {
         />
 
         {/* コンテンツ */}
-        <ul className="grid justify-items-center w-[304px] gap-6">
-          {ALL_ITEMS.map((item) => (
-            <li key={item.id} className="relative w-full h-[171px]">
+        <ul className="grid justify-items-center w-[304px] gap-6 md:w-[680px] xl:w-[1216px] md:grid-cols-2 xl:grid-cols-4 xl:gap-7">
+          {ALL_ITEMS.map((item, index) => (
+            <li
+              key={item.id}
+              className="relative w-full h-[171px] md:h-[328px] xl:h-[280px]"
+            >
               {/* 画像 */}
               <Image
                 src={item.imageSrc}
                 alt={item.name}
                 fill
                 className="object-cover"
-                sizes="304px"
+                sizes="(min-width: 1216px) 280px, (min-width: 768px) 680px, 304px"
+                priority={index === 0}
+                loading={index === 0 ? "eager" : "lazy"}
               />
 
               {/* グラデーション（画像の上に重ねる） */}
